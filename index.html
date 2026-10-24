@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CertCircuit™ by AkinVault</title>
+  <meta name="description" content="CertCircuit™ by AkinVault — professional IT and certification preparation. Free beta in development for CompTIA Security+ (SY0-801) and CySA+ (CS0-004)." />
+  <meta property="og:title" content="CertCircuit™ by AkinVault" />
+  <meta property="og:description" content="Learn • Practice • Succeed. Professional IT and certification preparation." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0B1220" />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0b1220;
+      --surface: #121c31;
+      --line: #1f2d47;
+      --text: #e6edf7;
+      --text-2: #c9d5e6;
+      --muted: #8fa3bf;
+      --cyan: #22d3ee;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: var(--navy);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 48px 16px 40px; }
+    .lockup { display: flex; align-items: center; gap: 18px; }
+    .lockup svg { flex: none; width: 76px; height: 76px; }
+    .wordmark { font-weight: 800; font-size: 34px; letter-spacing: 0.5px; line-height: 1; }
+    .wordmark span { color: var(--cyan); }
+    .wordmark sup { font-size: 0.32em; font-weight: 600; color: var(--muted); vertical-align: super; margin-left: 2px; }
+    .tagline { margin-top: 8px; color: var(--cyan); font-weight: 700; font-size: 13px; letter-spacing: 3px; }
+    .descriptor { margin-top: 4px; color: var(--muted); font-size: 14px; }
+    .by { color: var(--muted); font-weight: 600; font-size: 0.42em; letter-spacing: 1px; margin-left: 8px; vertical-align: middle; }
+    h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.08; letter-spacing: -0.5px; margin: 56px 0 16px; font-weight: 800; }
+    .lead { font-size: 18px; color: var(--text-2); max-width: 640px; margin: 0; }
+    .status {
+      display: inline-flex; align-items: center; gap: 10px; margin-top: 28px;
+      padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px;
+      background: var(--surface); color: var(--text-2); font-size: 14px; font-weight: 600;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.15); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 44px; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+    .card h2 { font-size: 17px; margin: 0 0 6px; }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+    .exams { margin-top: 44px; }
+    .exams h2 { font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
+    .exam { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 0; border-top: 1px solid var(--line); }
+    .exam:last-child { border-bottom: 1px solid var(--line); }
+    .exam strong { font-size: 17px; }
+    .exam span { color: var(--muted); }
+    footer { margin-top: 56px; color: var(--muted); font-size: 13px; }
+    footer p { margin: 6px 0; }
+    @media (max-width: 480px) {
+      .wrap { padding-top: 32px; }
+      .lockup svg { width: 60px; height: 60px; }
+      .wordmark { font-size: 27px; }
+      .by { display: block; margin: 6px 0 0; font-size: 12px; }
+      .tagline { font-size: 11px; letter-spacing: 2px; }
+      .lead { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="lockup" aria-label="CertCircuit by AkinVault">
+      <svg viewBox="0 0 120 120" role="img" aria-label="CertCircuit logo">
+        <rect width="120" height="120" rx="26" fill="#0B1220" stroke="#1F2D47" stroke-width="2" />
+        <path d="M84.3 31.7 A40 40 0 1 0 84.3 88.3" fill="none" stroke="#22D3EE" stroke-width="11" stroke-linecap="round" />
+        <path d="M68.7 47.3 A18 18 0 1 0 68.7 72.7" fill="none" stroke="#E6EDF7" stroke-width="11" stroke-linecap="round" />
+        <path d="M56 60 H102" fill="none" stroke="#22D3EE" stroke-width="7" stroke-linecap="round" />
+      </svg>
+      <div>
+        <div class="wordmark">CERT<span>CIRCUIT</span><sup>™</sup><span class="by">by AkinVault</span></div>
+        <div class="tagline">LEARN • PRACTICE • SUCCEED</div>
+        <div class="descriptor">Professional IT &amp; certification preparation</div>
+      </div>
+    </header>
+
+    <h1>Learn cybersecurity until it clicks.</h1>
+    <p class="lead">
+      CertCircuit is a study app for IT certification exams. Short lessons, scenario-based practice questions and a
+      clear explanation for every answer, built to help you understand, not just memorize.
+    </p>
+    <div class="status"><span class="dot" aria-hidden="true"></span>Free beta in development</div>
+
+    <section class="cards" aria-label="Features">
+      <div class="card">
+        <h2>Short lessons, then practice</h2>
+        <p>Five-minute lessons with a worked example, followed by scenario questions that make you think.</p>
+      </div>
+      <div class="card">
+        <h2>Every answer explained</h2>
+        <p>See why the right answer is right, and why each wrong one is wrong.</p>
+      </div>
+      <div class="card">
+        <h2>Reviews that stick</h2>
+        <p>Questions come back on a schedule, so you remember them on exam day, not just today.</p>
+      </div>
+    </section>
+
+    <section class="exams" aria-label="Exams in the beta">
+      <h2>First exams</h2>
+      <div class="exam"><strong>CompTIA Security+</strong><span>SY0-801</span></div>
+      <div class="exam"><strong>CompTIA CySA+ (Cybersecurity Analyst)</strong><span>CS0-004</span></div>
+    </section>
+
+    <footer>
+      <p>CertCircuit™ is a trademark of AkinVault Foundry LLC. © 2026 AkinVault Foundry LLC. All rights reserved.</p>
+      <p>Independent study tool. Not affiliated with or endorsed by CompTIA. CompTIA, Security+ and CySA+ are trademarks of CompTIA, Inc.</p>
+      <p>First published October 23, 2026.</p>
+    </footer>
+  </main>
+</body>
+</html>
