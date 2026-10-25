@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CertCircuit™ by AkinVault</title>
-  <meta name="description" content="CertCircuit™ by AkinVault — professional IT and certification preparation. Free beta in development for CompTIA Security+ (SY0-801) and CySA+ (CS0-004)." />
-  <meta property="og:title" content="CertCircuit™ by AkinVault" />
+  <title>Sec2SOC™ by AkinVault</title>
+  <meta name="description" content="Sec2SOC™ by AkinVault — professional IT and certification preparation. Free beta in development for CompTIA Security+ (SY0-801) and CySA+ (CS0-004)." />
+  <meta property="og:title" content="Sec2SOC™ by AkinVault" />
   <meta property="og:description" content="Learn • Practice • Succeed. Professional IT and certification preparation." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0B1220" />
@@ -35,12 +35,13 @@
     .wrap { max-width: 880px; margin: 0 auto; padding: 48px 16px 40px; }
     .lockup { display: flex; align-items: center; gap: 18px; }
     .lockup svg { flex: none; width: 76px; height: 76px; }
-    .wordmark { font-weight: 800; font-size: 34px; letter-spacing: 0.5px; line-height: 1; }
-    .wordmark span { color: var(--cyan); }
-    .wordmark sup { font-size: 0.32em; font-weight: 600; color: var(--muted); vertical-align: super; margin-left: 2px; }
-    .tagline { margin-top: 8px; color: var(--cyan); font-weight: 700; font-size: 13px; letter-spacing: 3px; }
+    .wordmark { display: flex; align-items: flex-start; gap: 2px; line-height: 1; }
+    .wordmark svg.wm { height: 36px; width: auto; display: block; }
+    
+    .wordmark sup { font-size: 11px; font-weight: 600; color: var(--muted); margin-left: 2px; }
+    .tagline { margin-top: 10px; color: #2dd4bf; font-weight: 700; font-size: 13px; letter-spacing: 3px; }
     .descriptor { margin-top: 4px; color: var(--muted); font-size: 14px; }
-    .by { color: var(--muted); font-weight: 600; font-size: 0.42em; letter-spacing: 1px; margin-left: 8px; vertical-align: middle; }
+    .by { color: var(--muted); font-weight: 600; font-size: 14px; letter-spacing: 1px; margin-left: 10px; align-self: center; }
     h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.08; letter-spacing: -0.5px; margin: 56px 0 16px; font-weight: 800; }
     .lead { font-size: 18px; color: var(--text-2); max-width: 640px; margin: 0; }
     .status {
@@ -64,8 +65,9 @@
     @media (max-width: 480px) {
       .wrap { padding-top: 32px; }
       .lockup svg { width: 60px; height: 60px; }
-      .wordmark { font-size: 27px; }
-      .by { display: block; margin: 6px 0 0; font-size: 12px; }
+      .wordmark svg.wm { height: 28px; }
+      .wordmark { flex-wrap: wrap; }
+      .by { flex-basis: 100%; margin: 6px 0 0; font-size: 12px; }
       .tagline { font-size: 11px; letter-spacing: 2px; }
       .lead { font-size: 17px; }
     }
@@ -73,23 +75,32 @@
 </head>
 <body>
   <main class="wrap">
-    <header class="lockup" aria-label="CertCircuit by AkinVault">
-      <svg viewBox="0 0 120 120" role="img" aria-label="CertCircuit logo">
-        <rect width="120" height="120" rx="26" fill="#0B1220" stroke="#1F2D47" stroke-width="2" />
-        <path d="M84.3 31.7 A40 40 0 1 0 84.3 88.3" fill="none" stroke="#22D3EE" stroke-width="11" stroke-linecap="round" />
-        <path d="M68.7 47.3 A18 18 0 1 0 68.7 72.7" fill="none" stroke="#E6EDF7" stroke-width="11" stroke-linecap="round" />
-        <path d="M56 60 H102" fill="none" stroke="#22D3EE" stroke-width="7" stroke-linecap="round" />
-      </svg>
+    <header class="lockup" aria-label="Sec2SOC by AkinVault">
+      <svg viewBox="0 0 120 120" role="img" aria-label="Sec2SOC logo"><defs>
+<linearGradient id="gm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="0.52" stop-color="#22D3EE"/><stop offset="1" stop-color="#4ADE80"/></linearGradient>
+<linearGradient id="glossm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".34"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".05"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+<linearGradient id="shadem" x1="0" y1="0" x2="0" y2="1"><stop offset=".55" stop-color="#0B1B3F" stop-opacity="0"/><stop offset="1" stop-color="#0B1B3F" stop-opacity=".30"/></linearGradient>
+<linearGradient id="facem" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E2EEFF"/></linearGradient>
+<linearGradient id="glassm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".96"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".62"/></linearGradient>
+<linearGradient id="rimm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".55"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".08"/></linearGradient>
+<filter id="liftm" x="-25%" y="-25%" width="150%" height="160%"><feDropShadow dx="0" dy="2.6" stdDeviation="2.4" flood-color="#0A1A40" flood-opacity=".38"/></filter>
+<filter id="lift2m" x="-25%" y="-25%" width="150%" height="160%"><feDropShadow dx="0" dy="0.9" stdDeviation="0.8" flood-color="#0A1A40" flood-opacity=".16"/></filter>
+<linearGradient id="face2m" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F3F8FF"/></linearGradient>
+<linearGradient id="gloss2m" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".22"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".03"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+<filter id="dropm" x="-25%" y="-25%" width="150%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.6" flood-color="#0A1A40" flood-opacity=".45"/></filter>
+<filter id="bevelm" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur in="SourceAlpha" stdDeviation="1.1" result="b"/><feSpecularLighting in="b" surfaceScale="2.6" specularConstant=".85" specularExponent="20" lighting-color="#FFFFFF" result="s"><fePointLight x="18" y="-36" z="70"/></feSpecularLighting><feComposite in="s" in2="SourceAlpha" operator="in" result="s2"/><feComposite in="SourceGraphic" in2="s2" operator="arithmetic" k1="0" k2="1" k3=".75" k4="0"/></filter>
+<clipPath id="cm"><rect width="120" height="120" rx="27"/></clipPath>
+</defs><clipPath id="clm"><rect width="120" height="120" rx="27"/></clipPath><rect width="120" height="120" rx="27" fill="url(#gm)"/><g clip-path="url(#clm)"><g transform="translate(60 60) scale(1.0) translate(-60 -60)"><path d="M60 11 C72 16 85 20 98 22 V55 C98 81 82 99 60 109 C38 99 22 81 22 55 V22 C35 20 48 16 60 11 Z" fill="#FFFFFF" fill-opacity=".1" stroke="#FFFFFF" stroke-opacity=".3" stroke-width="3.6" stroke-linejoin="round"/></g><rect width="120" height="120" fill="url(#shadem)"/><path d="M0 0 H120 V50 C82 60 38 60 0 50 Z" fill="url(#gloss2m)"/></g><rect x=".75" y=".75" width="118.5" height="118.5" rx="26.4" fill="none" stroke="url(#rimm)" stroke-width="1.5"/><g transform="translate(60 60) scale(1.0) translate(-60 -60)"><g filter="url(#lift2m)"><path transform="translate(28.533 60.000) scale(0.05205 -0.05205)" d="M334 -20Q232 -20 162.5 12.0Q93 44 57.5 99.5Q22 155 22 227H202Q202 201 216.5 179.5Q231 158 260.0 146.0Q289 134 334 134Q373 134 400.5 144.0Q428 154 442.5 172.0Q457 190 457 215Q457 247 430.0 264.5Q403 282 339 287L292 291Q179 301 112.0 362.0Q45 423 45 524Q45 596 78.5 647.0Q112 698 173.0 725.0Q234 752 317 752Q407 752 469.5 722.0Q532 692 565.0 637.5Q598 583 598 511H418Q418 535 406.0 555.0Q394 575 371.5 586.5Q349 598 317 598Q287 598 266.5 588.5Q246 579 235.5 562.0Q225 545 225 524Q225 496 244.0 476.0Q263 456 310 452L357 448Q439 441 502.0 412.5Q565 384 601.0 335.0Q637 286 637 215Q637 144 600.5 91.0Q564 38 496.5 9.0Q429 -20 334 -20Z" fill="url(#face2m)" /><path transform="translate(28.533 60.000) scale(0.05205 -0.05205)" d="M653 0V160Q653 208 669.5 244.5Q686 281 721.5 309.0Q757 337 814 361L925 408Q968 426 987.5 451.0Q1007 476 1007 514Q1007 549 983.5 573.5Q960 598 915 598Q869 598 846.0 572.5Q823 547 823 504H643Q643 576 674.0 632.0Q705 688 765.5 720.0Q826 752 915 752Q1003 752 1063.5 721.5Q1124 691 1155.5 638.5Q1187 586 1187 520V508Q1187 423 1141.0 368.0Q1095 313 993 269L882 222Q858 212 846.5 200.0Q835 188 835 168V132L792 160H1185V0Z" fill="url(#face2m)" /><rect x="30.88" y="86.00" width="15.41" height="12.00" rx="3.6" fill="#FFFFFF" fill-opacity="0.55" /><rect x="52.29" y="78.00" width="15.41" height="20.00" rx="3.6" fill="#FFFFFF" fill-opacity="0.775" /><rect x="73.71" y="70.00" width="15.41" height="28.00" rx="3.6" fill="#FFFFFF" fill-opacity="1" /></g></g></svg>
       <div>
-        <div class="wordmark">CERT<span>CIRCUIT</span><sup>™</sup><span class="by">by AkinVault</span></div>
-        <div class="tagline">LEARN • PRACTICE • SUCCEED</div>
-        <div class="descriptor">Professional IT &amp; certification preparation</div>
+        <div class="wordmark"><svg class="wm" viewBox="0 0 196.4 40.0" role="img" aria-label="Sec2SOC"><defs><linearGradient id="wsite" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset=".55" stop-color="#22D3EE"/><stop offset="1" stop-color="#4ADE80"/></linearGradient></defs><path transform="translate(-0.904 34.000) scale(0.04110 -0.04110)" d="M334 -20Q232 -20 162.5 12.0Q93 44 57.5 99.5Q22 155 22 227H202Q202 201 216.5 179.5Q231 158 260.0 146.0Q289 134 334 134Q373 134 400.5 144.0Q428 154 442.5 172.0Q457 190 457 215Q457 247 430.0 264.5Q403 282 339 287L292 291Q179 301 112.0 362.0Q45 423 45 524Q45 596 78.5 647.0Q112 698 173.0 725.0Q234 752 317 752Q407 752 469.5 722.0Q532 692 565.0 637.5Q598 583 598 511H418Q418 535 406.0 555.0Q394 575 371.5 586.5Q349 598 317 598Q287 598 266.5 588.5Q246 579 235.5 562.0Q225 545 225 524Q225 496 244.0 476.0Q263 456 310 452L357 448Q439 441 502.0 412.5Q565 384 601.0 335.0Q637 286 637 215Q637 144 600.5 91.0Q564 38 496.5 9.0Q429 -20 334 -20Z" fill="#F3F7FD"/><path transform="translate(-0.904 34.000) scale(0.04110 -0.04110)" d="M974 -20Q904 -20 850.0 4.0Q796 28 759.0 69.0Q722 110 702.5 161.0Q683 212 683 266V286Q683 342 702.5 393.5Q722 445 758.5 485.0Q795 525 848.0 548.5Q901 572 968 572Q1057 572 1119.0 532.0Q1181 492 1214.0 426.5Q1247 361 1247 284V226H759V324H1142L1079 280Q1079 327 1066.5 359.5Q1054 392 1029.5 409.0Q1005 426 968 426Q932 426 905.5 409.5Q879 393 865.0 359.5Q851 326 851 275Q851 229 864.0 195.5Q877 162 904.0 144.0Q931 126 974 126Q1012 126 1036.5 139.0Q1061 152 1071 174H1237Q1225 118 1189.5 74.0Q1154 30 1099.5 5.0Q1045 -20 974 -20Z" fill="#F3F7FD"/><path transform="translate(-0.904 34.000) scale(0.04110 -0.04110)" d="M1585 -20Q1513 -20 1460.0 3.5Q1407 27 1371.5 67.0Q1336 107 1318.5 158.0Q1301 209 1301 264V284Q1301 342 1319.5 394.0Q1338 446 1374.0 486.0Q1410 526 1463.0 549.0Q1516 572 1585 572Q1661 572 1719.0 542.0Q1777 512 1811.5 459.5Q1846 407 1850 339H1672Q1669 372 1647.5 395.0Q1626 418 1585 418Q1550 418 1527.5 400.0Q1505 382 1494.0 350.0Q1483 318 1483 274Q1483 233 1492.5 201.0Q1502 169 1524.5 151.5Q1547 134 1585 134Q1613 134 1632.0 144.0Q1651 154 1662.0 172.5Q1673 191 1676 216H1854Q1850 146 1814.5 93.0Q1779 40 1720.0 10.0Q1661 -20 1585 -20Z" fill="#F3F7FD"/><path transform="translate(-0.904 34.000) scale(0.04110 -0.04110)" d="M1924 0V160Q1924 208 1940.5 244.5Q1957 281 1992.5 309.0Q2028 337 2085 361L2196 408Q2239 426 2258.5 451.0Q2278 476 2278 514Q2278 549 2254.5 573.5Q2231 598 2186 598Q2140 598 2117.0 572.5Q2094 547 2094 504H1914Q1914 576 1945.0 632.0Q1976 688 2036.5 720.0Q2097 752 2186 752Q2274 752 2334.5 721.5Q2395 691 2426.5 638.5Q2458 586 2458 520V508Q2458 423 2412.0 368.0Q2366 313 2264 269L2153 222Q2129 212 2117.5 200.0Q2106 188 2106 168V132L2063 160H2456V0Z" fill="url(#wsite)"/><path transform="translate(-0.904 34.000) scale(0.04110 -0.04110)" d="M2830 -20Q2728 -20 2658.5 12.0Q2589 44 2553.5 99.5Q2518 155 2518 227H2698Q2698 201 2712.5 179.5Q2727 158 2756.0 146.0Q2785 134 2830 134Q2869 134 2896.5 144.0Q2924 154 2938.5 172.0Q2953 190 2953 215Q2953 247 2926.0 264.5Q2899 282 2835 287L2788 291Q2675 301 2608.0 362.0Q2541 423 2541 524Q2541 596 2574.5 647.0Q2608 698 2669.0 725.0Q2730 752 2813 752Q2903 752 2965.5 722.0Q3028 692 3061.0 637.5Q3094 583 3094 511H2914Q2914 535 2902.0 555.0Q2890 575 2867.5 586.5Q2845 598 2813 598Q2783 598 2762.5 588.5Q2742 579 2731.5 562.0Q2721 545 2721 524Q2721 496 2740.0 476.0Q2759 456 2806 452L2853 448Q2935 441 2998.0 412.5Q3061 384 3097.0 335.0Q3133 286 3133 215Q3133 144 3096.5 91.0Q3060 38 2992.5 9.0Q2925 -20 2830 -20Z" fill="#F3F7FD"/><path transform="translate(-0.904 34.000) scale(0.04110 -0.04110)" d="M3577 -20Q3477 -20 3403.0 14.5Q3329 49 3280.0 105.5Q3231 162 3207.0 228.0Q3183 294 3183 356V378Q3183 447 3208.0 513.5Q3233 580 3283.0 634.0Q3333 688 3406.5 720.0Q3480 752 3577 752Q3673 752 3746.5 720.0Q3820 688 3870.0 634.0Q3920 580 3945.5 513.5Q3971 447 3971 378V356Q3971 294 3946.5 228.0Q3922 162 3873.0 105.5Q3824 49 3750.0 14.5Q3676 -20 3577 -20ZM3577 154Q3625 154 3663.0 170.0Q3701 186 3728.0 215.0Q3755 244 3769.0 282.5Q3783 321 3783 366Q3783 414 3768.5 453.0Q3754 492 3727.0 520.0Q3700 548 3662.0 563.0Q3624 578 3577 578Q3529 578 3491.0 563.0Q3453 548 3426.0 520.0Q3399 492 3385.0 453.0Q3371 414 3371 366Q3371 321 3385.0 282.5Q3399 244 3426.0 215.0Q3453 186 3491.0 170.0Q3529 154 3577 154Z" fill="#F3F7FD"/><path transform="translate(-0.904 34.000) scale(0.04110 -0.04110)" d="M4414 -20Q4315 -20 4244.0 14.5Q4173 49 4127.0 105.5Q4081 162 4059.0 228.0Q4037 294 4037 356V378Q4037 447 4059.5 513.5Q4082 580 4128.5 634.0Q4175 688 4245.0 720.0Q4315 752 4409 752Q4509 752 4586.5 714.5Q4664 677 4711.0 609.5Q4758 542 4766 453H4580Q4573 491 4550.0 519.0Q4527 547 4491.0 562.5Q4455 578 4409 578Q4366 578 4331.5 563.0Q4297 548 4273.5 520.5Q4250 493 4237.5 454.0Q4225 415 4225 366Q4225 317 4237.5 278.0Q4250 239 4274.5 211.0Q4299 183 4334.0 168.5Q4369 154 4414 154Q4484 154 4532.5 188.0Q4581 222 4591 279H4777Q4768 197 4722.0 129.0Q4676 61 4598.0 20.5Q4520 -20 4414 -20Z" fill="#F3F7FD"/></svg><sup>™</sup><span class="by">by AkinVault</span></div>
+        <div class="tagline">FROM SECURITY KNOWLEDGE TO SOC SKILLS</div>
+        <div class="descriptor">Cybersecurity certification &amp; career preparation</div>
       </div>
     </header>
 
     <h1>Learn cybersecurity until it clicks.</h1>
     <p class="lead">
-      CertCircuit is a study app for IT certification exams. Short lessons, scenario-based practice questions and a
+      Sec2SOC is a study app for IT certification exams. Short lessons, scenario-based practice questions and a
       clear explanation for every answer, built to help you understand, not just memorize.
     </p>
     <div class="status"><span class="dot" aria-hidden="true"></span>Free beta in development</div>
@@ -116,9 +127,9 @@
     </section>
 
     <footer>
-      <p>CertCircuit™ is a trademark of AkinVault Foundry LLC. © 2026 AkinVault Foundry LLC. All rights reserved.</p>
+      <p>Sec2SOC™ is a trademark of AkinVault Foundry LLC. © 2026 AkinVault Foundry LLC. All rights reserved.</p>
       <p>Independent study tool. Not affiliated with or endorsed by CompTIA. CompTIA, Security+ and CySA+ are trademarks of CompTIA, Inc.</p>
-      <p>First published October 23, 2026.</p>
+      <p>First published October 24, 2026.</p>
     </footer>
   </main>
 </body>
