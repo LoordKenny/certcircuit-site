@@ -44,4 +44,4 @@ if ($LASTEXITCODE -ne 0) {
     exit 1
 }
 Write-Host "Published: $stamp" -ForegroundColor Green
-Write-Host "Page address (after GitHub Pages is turned on): https://loordkenny.github.io/sec2soc-site/"
+Write-Host "Page address: https://sec2soc.com (GitHub may take a minute or two to update it)"
